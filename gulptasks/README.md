@@ -11,7 +11,9 @@ Edit gulpfile.js.
 
 Then, run the following commands in the theme's directory :
 
-	yarn install or npm install
+	yarn install 
+or 
+	npm install
 
 Launch your watch :
 
