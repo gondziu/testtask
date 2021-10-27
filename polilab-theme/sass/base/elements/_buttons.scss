@@ -1,0 +1,20 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid $color__green;
+	background: $color__green;
+	color: #fff;
+	line-height: 1;
+	padding: 16px 35px 17px;
+
+	&:hover {
+		background-color: transparent;
+		color: $color__green;
+	}
+
+	&:active,
+	&:focus {
+		border-color: darken($color__green, $amount: 0.5);
+	}
+}

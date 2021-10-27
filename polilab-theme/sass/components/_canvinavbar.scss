@@ -1,0 +1,14 @@
+.canvi-navbar{
+    padding: 47px 6% 30px;
+    background-color: $color__bg;
+    &__header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;        
+        align-items: center;
+    }
+    .custom-logo-link {
+        margin: 0 auto;
+    }
+}
+

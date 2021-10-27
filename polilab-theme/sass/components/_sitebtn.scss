@@ -1,0 +1,13 @@
+.site-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: $color__green;
+    border: 1px solid $color__green;
+    padding: 16px 49px 17px;
+    transition: .3s ease background-color, .3s ease color;
+    &:hover,
+    &:focus {
+        background-color: $color__green;
+        color: $color__bg;
+    }
+}

@@ -1,0 +1,17 @@
+.custom-logo-link {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+@include mappy-query(phone) {
+    .custom-logo-link {
+        max-width: 180px;
+    }
+}
+
+@include mappy-query(laptop) {
+    .custom-logo-link {
+        max-width: 180px;
+        margin: 0 auto 0 0;
+    }
+}

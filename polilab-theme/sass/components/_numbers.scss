@@ -1,0 +1,47 @@
+.numbers {
+    background-size: cover;
+    background-position: center;
+    min-height: 337px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include mappy-bp( max-width 768px ) {
+        background-position-x: 77.4%;
+    }    
+    &__item {
+        text-align: center;
+        @include mappy-bp( max-width 768px ) {
+            &+.numbers__item {
+                margin-top: 30px;
+            }
+        }        
+    }
+    &__desc {
+        line-height: 1.375;
+        margin: 0;
+    }
+    &__counter {
+        line-height: 1;
+        @include font-size(64);
+        font-weight: 700;
+        color: $color__green;
+    }
+}
+
+
+@include mappy-query(tablet) {
+    .numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item {
+            margin-top: 60px;
+            min-width: 180px;
+            &+.numbers__item {
+                margin-left: 20px;
+            }
+        }
+        &__counter {
+            margin-bottom: 4px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.container,
+.container-wide{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6%;
+}
+
+@include mappy-query(desktop) {
+    .container{
+        max-width: 1180px;
+        padding: 0;
+    }
+}

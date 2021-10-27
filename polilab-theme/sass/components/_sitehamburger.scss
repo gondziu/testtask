@@ -1,0 +1,70 @@
+.site-hamburger {
+	position: absolute;
+	padding: 0;
+	background-color: transparent;
+	z-index: 9999;
+	outline: 0;
+	border: 0;
+	width: 40px;
+	height: 40px;
+	span {
+		transition: transform .3s ease, opacity .4s ease;
+		display: block;
+		background-color: $color__gray;
+		width: 30px;
+		height: 3px;
+        border-radius: 2px;
+		margin: auto;
+
+		&+span {
+			margin-top: 6px;
+		}
+	}
+}
+
+
+.site-hamburger-close {
+	position: absolute;
+	padding: 0;
+	background-color: transparent;
+    z-index: 9999;
+	outline: 0;
+	border: 0;
+	width: 40px;
+	height: 40px;
+    span {
+        display: block;
+		background-color: $color__gray;
+		width: 30px;
+		height: 3px;
+        border-radius: 2px;
+		margin: auto;
+
+        &+span {
+            margin-top: 0;
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(1) {
+            transform: rotate(45deg);
+            transform-origin: center;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+            transform-origin: center;
+            margin-top: -6px;
+        }
+    }
+}
+
+
+
+@include mappy-query(laptop) {
+	.site-hamburger {
+		display: none;
+	}
+}

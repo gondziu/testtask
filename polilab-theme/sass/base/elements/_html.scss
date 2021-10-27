@@ -1,0 +1,18 @@
+html {
+    scrollbar-width: thin;
+    scrollbar-color: $color__green $color__lightgray;
+
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $color__lightgray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color__green;
+        border-radius: 7px;
+        border: 1px solid $color__lightgray;
+    }
+}

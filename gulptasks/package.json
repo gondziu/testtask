@@ -1,0 +1,22 @@
+{
+    "name": "polilab",
+    "version": "1.0.0",
+    "description": "PoliLAB Template",
+    "main": "index.php",
+    "author": "Adam Gondek",
+    "license": "GPL-3.0",
+    "devDependencies": {
+        "autoprefixer": "^8.4.1",
+        "browser-sync": "^2.26.13",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-image": "^4.3.0",
+        "gulp-jshint": "^2.1.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.0",
+        "jshint": "^2.10.2"
+    }
+}

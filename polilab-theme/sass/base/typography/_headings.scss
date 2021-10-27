@@ -1,0 +1,21 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin: 0 0 32px 0;
+}
+
+h1 {
+	@include font-size(26);
+	line-height: 1.524;	
+}
+
+
+@include mappy-query(tablet) {
+	h1 {
+		@include font-size(42);
+	}
+}

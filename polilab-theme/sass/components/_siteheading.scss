@@ -1,0 +1,29 @@
+.site-heading {
+    @include font-size(24);
+    line-height: 28px;
+    font-weight: 400;
+    span{
+        color: $color__green;
+        font-weight: 700;
+    }
+    &--center {
+        text-align: center;        
+    }
+}
+
+
+@include mappy-query(laptop) {
+    .site-heading {
+        @include font-size(32);
+        line-height: 2;
+        &--center {
+            &:after{
+                @include pseudo;
+                width: 181px;
+                height: 2px;
+                background-color: $color__gray;
+                margin: 6px auto 0;
+            }
+        }
+    }    
+}

@@ -1,0 +1,152 @@
+.ootb-tabcordion {
+    padding: 0 6%;
+    max-width: 100%;    
+    &.has-tabs {
+        margin-top: 87px;
+        padding: 0;
+        .ootb-tabcordion--tabs {
+            opacity: 1;
+            height: auto;
+            visibility: visible;
+        }
+
+
+        .ootb-tabcordion--entry {
+            min-height: 0;
+
+            &::before {
+                display: none;
+            }
+
+            .ootb-tabcordion--entry-container {
+                background-color: rgba($color__lightgray, $alpha: 0.2);
+                margin-bottom: 0;
+            }
+
+            &.is-active {
+                .ootb-tabcordion--entry-content {
+                    margin: 0 auto;
+                    max-width: 785px;
+                    padding-top: 81px;
+                    padding-bottom: 81px;
+                    opacity: 1;
+                    transition: opacity 400ms ease-in-out;
+                }
+            }
+            .ootb-tabcordion--entry-content {
+                opacity: 0;
+                transition: opacity 400ms ease-in-out;
+            }
+        }        
+    }
+}
+
+.ootb-tabcordion--tabs {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    .tab {
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        color: $color__text;
+        padding: 0 30px 30px;
+        @include font-size(22);        
+        margin: 0;
+        border: none;
+        border-right: 0; // Set the disstance with border instead of margin, for more accurate JS calculation of the width
+        cursor: pointer;
+        &:before {
+            display: block;
+            content: attr(data-title);
+            font-weight: bold;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+
+        &.is-active {
+            font-weight: 700;
+            background: transparent;
+            color: $color__green;
+            border-bottom: 3px solid $color__green;
+            &:hover,
+            &:focus {
+                border-bottom: 3px solid $color__green;
+            }
+            img {
+                filter: invert(67%) sepia(6%) saturate(3816%) hue-rotate(40deg) brightness(117%) contrast(78%);
+            }
+        }
+
+        img{
+            height: 75px;
+            margin: 0 auto 42px;
+            filter: invert(27%) sepia(1%) saturate(2071%) hue-rotate(360deg) brightness(103%) contrast(98%);
+        }
+    }
+}
+
+.ootb-tabcordion--entry {
+    overflow: hidden;
+    &::before {
+        position: relative;
+        content: attr(data-title);
+        cursor: pointer;
+        z-index: 1;
+        background: $color__light;
+        color: #474747;
+        padding: 30px;
+        display: block;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    &.is-active {
+        .ootb-tabcordion--entry-content {
+            margin-top: 0;
+            height: auto;
+            opacity: 1;
+            transition: margin 400ms ease-out -100ms;
+        }
+
+        .ootb-tabcordion--entry-container {
+            overflow: hidden;            
+        }
+        
+        &:before {
+            background: $color__accordion-active;
+            color: $color__green;
+        }
+        
+    }
+}
+
+.ootb-tabcordion--entry-container {
+    overflow: hidden;    
+    margin-bottom: 15px;
+}
+
+.ootb-tabcordion--entry-content {
+    margin: 0 auto;
+    position: relative;
+    margin-top: -100%;
+    height: 0;
+    opacity: 0;
+    transition: margin 500ms ease-in;
+    padding: 30px;
+}

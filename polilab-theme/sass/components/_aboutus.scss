@@ -1,0 +1,54 @@
+.aboutus {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include mappy-bp( max-width 768px ) {
+        text-align: center;
+        .site-heading {
+            margin: 32px 0;
+        }
+    }    
+    &__img {
+        width: 233px;        
+    }
+    &__content {
+        p{
+            margin-top: 7px;
+            line-height: 19px;
+        }
+    }
+}
+
+
+@include mappy-query(tablet) {
+    .aboutus {
+        padding-top: 88px;
+        padding-bottom: 97px;
+        display: flex;
+        flex-wrap: wrap;
+        .site-heading{
+            margin: 0;
+        }
+        &__img {
+            align-self: flex-start;
+            margin-top: 32px;
+            margin-left: -2px;
+        }
+        &__content {
+            margin-left: auto;
+            width: 57.7%;
+            p{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+
+@include mappy-query(laptop) {
+    .aboutus {        
+        &__img {
+            width: 339px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+index.php
+
+# THEME
+/polilab-theme/composer.lock
+/polilab-theme/vendor/
+/polilab-theme/node_modules/
+/polilab-theme/package-lock.json
+
+# GULP
+/gulptasks/yarn.lock
+/gulptasks/node_modules/

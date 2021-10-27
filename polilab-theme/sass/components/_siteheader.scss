@@ -1,0 +1,31 @@
+.site-header {	
+	> .container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	padding-top: 47px;
+	padding-bottom: 10px;		
+	@include fixed( top 0 left 0 right 0 );
+	transition: .4s ease padding-top, .4s ease background-color;
+	&--fixed {	
+		z-index: 9999;		
+		background-color: rgba($color__bg, 0.95);
+		padding-top: 10px;
+		// &:before,
+		// &:after{
+		// 	@include pseudo;
+		// 	width: 2001px;
+		// 	height: 100%;
+		// 	background-color: rgba($color__bg, 0.95);
+		// }
+		// &:before {
+		// 	@include absolute( left -2000px );
+		// }
+		// &:after {
+		// 	@include absolute( right -2000px );
+		// }
+	}
+}
+

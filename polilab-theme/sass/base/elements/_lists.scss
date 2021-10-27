@@ -1,0 +1,44 @@
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	&:not(#main-menu):not(.ab-top-menu) {
+		list-style: none;
+		li{
+			position: relative;
+			padding-left: 47px;
+			@include font-size(18);
+			&+li {
+				margin-top: 20px;
+			}
+			&:before {
+				@include pseudo;
+				@include absolute( left 0 );
+				background-image: url(./img/tick.png);
+				width: 26px;
+				height: 21px;
+			}
+		}
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

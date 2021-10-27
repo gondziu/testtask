@@ -1,0 +1,59 @@
+.site-banner {
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba($color__lightgray, $alpha: 0.2);
+    height: 568px;
+    background-position: center;
+    background-size: cover;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+    @include mappy-bp( max-width 768px ) {
+        background-position-x: 65%;
+        &__mobilebg {
+            padding-top: 40px;            
+            background-color: rgba($color__bg, $alpha: 0.61);
+        }
+        &__mobilebg2 {
+            background-color: $color__bg;
+            padding-bottom: 32px;
+            margin-left: -10%;
+            margin-right: -10%;
+            margin-top: 32px;
+        }
+    }    
+    &__content{
+        @include mappy-bp( max-width 768px ) {
+            text-align: center;   
+        }             
+        .site-btn {
+            margin-top: 32px;
+        }
+        p {
+            margin-top: 1px;
+        }
+    }
+    
+}
+
+
+@include mappy-query(tablet) {
+    .site-banner {
+        height: 768px;
+        align-items: center;
+        &__content {
+            margin-top: 39px;
+        }
+    }
+}
+
+@include mappy-query(fhd) {
+    .site-banner {
+        height: 992px;
+    }
+}

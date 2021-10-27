@@ -1,0 +1,17 @@
+p {
+	margin: 0;
+	&+p {
+		margin-top: 20px;
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+big {
+	font-size: 125%;
+}
